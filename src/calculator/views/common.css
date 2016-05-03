@@ -1,0 +1,27 @@
+Button {
+    /*
+        http://stackoverflow.com/questions/29096731/javafx-width-css-not-reacting 都要加-fx是有多傻...
+        http://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+    */
+    -fx-max-width: Infinity;
+    -fx-max-height: Infinity;
+}
+#showBar {
+    -fx-padding: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-color: #B5B5B5;
+    -fx-background-color: linear-gradient(white 1%, #D0D0D0 30%, white);
+}
+#memory {
+    -fx-alignment: bottom-left;
+}
+#expression {
+    -fx-font-size: 14;
+    -fx-alignment: top-right;
+}
+#number {
+    -fx-font-size: 18;
+    -fx-alignment: top-right;
+}

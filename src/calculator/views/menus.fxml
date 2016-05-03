@@ -1,0 +1,21 @@
+<?import javafx.scene.control.*?>
+<MenuBar xmlns:fx="http://javafx.com/fxml" fx:controller="calculator.MenuController">
+    <!--
+        http://stackoverflow.com/questions/29151158/javafx-fxml-accelerators-platform-independence
+        http://stackoverflow.com/questions/34010509/adding-radiomenuitem-to-togglegroup-in-fxml
+    -->
+    <Menu text="查看(_V)">
+        <fx:define>
+            <ToggleGroup fx:id="toggleGroupMode"/>
+        </fx:define>
+        <RadioMenuItem text="标准型" accelerator="Alt+1" toggleGroup="$toggleGroupMode" selected="true"/>
+        <RadioMenuItem text="科学型" accelerator="Alt+2" toggleGroup="$toggleGroupMode" disable="true"/>
+    </Menu>
+    <Menu fx:id="mnuEdit" text="编辑(_V)">
+        <MenuItem onAction="#handleCopyAction" text="复制" accelerator="Shortcut+C" />
+        <MenuItem onAction="#handlePasteAction" text="粘贴" accelerator="Shortcut+V" />
+    </Menu>
+    <Menu text="帮助(_H)">
+        <MenuItem onAction="#handleAboutAction" text="关于计算器" />
+    </Menu>
+</MenuBar>

@@ -1,0 +1,9 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER">
+    <Label text="版本: 0.0" />
+    <Label text="这只是一个简单的计算器而已..." />
+</VBox>

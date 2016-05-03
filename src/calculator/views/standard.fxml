@@ -1,0 +1,69 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<BorderPane fx:controller="calculator.Controller" xmlns:fx="http://javafx.com/fxml"
+            fx:id="root" stylesheets="@common.css">
+    <top>
+        <!-- menu bar here -->
+    </top>
+    <center>
+        <AnchorPane>
+            <VBox id="showBar" AnchorPane.leftAnchor="5" AnchorPane.rightAnchor="5"
+                  AnchorPane.topAnchor="5" prefHeight="50">
+                <Label fx:id="expression" maxWidth="Infinity" />
+                <HBox>
+                    <Label fx:id="memory" translateY="5"/>
+                    <Label fx:id="number" HBox.hgrow="ALWAYS" maxWidth="Infinity"  />
+                </HBox>
+            </VBox>
+            <GridPane AnchorPane.leftAnchor="5" AnchorPane.rightAnchor="5"
+                      AnchorPane.topAnchor="60" AnchorPane.bottomAnchor="5"
+                      alignment="center" hgap="5" vgap="5" maxWidth="Infinity" maxHeight="Infinity">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                </rowConstraints>
+                <Button text="." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button text="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+                        GridPane.rowIndex="4" GridPane.rowSpan="1" />
+                <Button text="1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Button text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button text="4" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <Button text="=" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+                <Button text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Button text="←"  GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Button text="C"  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Button text="/"  GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Button text="*"  GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            </GridPane>
+        </AnchorPane>
+    </center>
+</BorderPane>
+
